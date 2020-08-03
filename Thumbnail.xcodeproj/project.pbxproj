@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B80C61E24D60F5100AED54D /* myScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80C61D24D60F5100AED54D /* myScrollView.swift */; };
+		2B80C62024D6141600AED54D /* CenteringClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80C61F24D6141600AED54D /* CenteringClipView.swift */; };
 		2BE2140224D22E6900249B96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2140124D22E6900249B96 /* AppDelegate.swift */; };
 		2BE2140424D22E6900249B96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2140324D22E6900249B96 /* ViewController.swift */; };
 		2BE2140624D22E6A00249B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2140524D22E6A00249B96 /* Assets.xcassets */; };
 		2BE2140924D22E6A00249B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2140724D22E6A00249B96 /* Main.storyboard */; };
 		2BE2141524D22E6A00249B96 /* ThumbnailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2141424D22E6A00249B96 /* ThumbnailTests.swift */; };
 		2BE2142024D22E6A00249B96 /* ThumbnailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2141F24D22E6A00249B96 /* ThumbnailUITests.swift */; };
+		2BF143D324D2E38A003F0009 /* DragDropImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF143D224D2E38A003F0009 /* DragDropImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B80C61D24D60F5100AED54D /* myScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myScrollView.swift; sourceTree = "<group>"; };
+		2B80C61F24D6141600AED54D /* CenteringClipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteringClipView.swift; sourceTree = "<group>"; };
 		2BE213FE24D22E6900249B96 /* Thumbnail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thumbnail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE2140124D22E6900249B96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BE2140324D22E6900249B96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		2BE2141B24D22E6A00249B96 /* ThumbnailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThumbnailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE2141F24D22E6A00249B96 /* ThumbnailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailUITests.swift; sourceTree = "<group>"; };
 		2BE2142124D22E6A00249B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BF143D224D2E38A003F0009 /* DragDropImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +102,13 @@
 		2BE2140024D22E6900249B96 /* Thumbnail */ = {
 			isa = PBXGroup;
 			children = (
+				2B80C61D24D60F5100AED54D /* myScrollView.swift */,
 				2BE2140124D22E6900249B96 /* AppDelegate.swift */,
 				2BE2140324D22E6900249B96 /* ViewController.swift */,
+				2B80C61F24D6141600AED54D /* CenteringClipView.swift */,
 				2BE2140524D22E6A00249B96 /* Assets.xcassets */,
 				2BE2140724D22E6A00249B96 /* Main.storyboard */,
+				2BF143D224D2E38A003F0009 /* DragDropImageView.swift */,
 				2BE2140A24D22E6A00249B96 /* Info.plist */,
 				2BE2140B24D22E6A00249B96 /* Thumbnail.entitlements */,
 			);
@@ -254,8 +263,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B80C61E24D60F5100AED54D /* myScrollView.swift in Sources */,
+				2B80C62024D6141600AED54D /* CenteringClipView.swift in Sources */,
 				2BE2140424D22E6900249B96 /* ViewController.swift in Sources */,
 				2BE2140224D22E6900249B96 /* AppDelegate.swift in Sources */,
+				2BF143D324D2E38A003F0009 /* DragDropImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,10 +432,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Thumbnail/Thumbnail.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XQ284ZEU8W;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = Thumbnail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,10 +453,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Thumbnail/Thumbnail.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XQ284ZEU8W;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = Thumbnail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

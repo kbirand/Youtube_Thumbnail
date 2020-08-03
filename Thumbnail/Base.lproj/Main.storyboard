@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -10,11 +11,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Thumbnail" id="1Xt-HY-uBw">
+                            <menuItem title="Yt Thumbnail Generator" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Thumbnail" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Yt Thumbnail Generator" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Thumbnail" id="5kV-Vb-QxS">
+                                        <menuItem title="About Yt Thumbnail Generator" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -28,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Thumbnail" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Yt Thumbnail Generator" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -46,7 +47,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Thumbnail" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Yt Thumbnail Generator" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -659,7 +660,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Thumbnail Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="Yt Thumbnail Generator Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Thumbnail" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,11 +684,13 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Yt Thumbnail Generator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="myThumbApp" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="contentRect" x="196" y="240" width="1920" height="1080"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <value key="minSize" type="size" width="1920" height="1080"/>
+                        <value key="maxSize" type="size" width="1920" height="1080"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -698,20 +701,232 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-548" y="-330"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Thumbnail" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="666" height="398"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWU-Do-wEF">
+                                <rect key="frame" x="0.0" y="0.0" width="666" height="398"/>
+                                <clipView key="contentView" id="8I0-68-c98" customClass="CenteringClipView" customModule="Thumbnail" customModuleProvider="target">
+                                    <rect key="frame" x="1" y="1" width="664" height="396"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="x0r-HD-wFV">
+                                            <rect key="frame" x="0.0" y="0.0" width="664" height="396"/>
+                                            <subviews>
+                                                <imageView focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SiC-cb-5GA">
+                                                    <rect key="frame" x="194" y="112" width="281" height="163"/>
+                                                    <imageCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" id="ed2-J7-idR"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="SiC-cb-5GA" secondAttribute="trailing" constant="189" id="Zva-X8-b2d"/>
+                                                <constraint firstAttribute="bottom" secondItem="SiC-cb-5GA" secondAttribute="bottom" constant="112" id="bQa-En-4ip"/>
+                                                <constraint firstItem="SiC-cb-5GA" firstAttribute="top" secondItem="x0r-HD-wFV" secondAttribute="top" constant="121" id="kSh-9w-QgN"/>
+                                                <constraint firstItem="SiC-cb-5GA" firstAttribute="leading" secondItem="x0r-HD-wFV" secondAttribute="leading" constant="194" id="lo0-x7-rtz"/>
+                                            </constraints>
+                                        </customView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="x0r-HD-wFV" firstAttribute="top" secondItem="8I0-68-c98" secondAttribute="top" id="6zS-Ms-WbT"/>
+                                        <constraint firstAttribute="bottom" secondItem="x0r-HD-wFV" secondAttribute="bottom" id="C5b-bw-3Yv"/>
+                                        <constraint firstAttribute="trailing" secondItem="x0r-HD-wFV" secondAttribute="trailing" id="FIs-77-auC"/>
+                                        <constraint firstItem="x0r-HD-wFV" firstAttribute="leading" secondItem="8I0-68-c98" secondAttribute="leading" id="mTO-JC-ZwV"/>
+                                    </constraints>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Tio-9j-au8">
+                                    <rect key="frame" x="-100" y="-100" width="480" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="8Ig-Sj-Rcq">
+                                    <rect key="frame" x="-100" y="-100" width="15" height="285"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="30" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5J7-z5-7lz">
+                                <rect key="frame" x="108" y="226" width="450" height="172"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uFh-qI-a0a">
+                                        <rect key="frame" x="-6" y="69" width="47" height="32"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSRemoveTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K63-ja-OiJ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="zI:" target="XfG-lQ-9wD" id="CSf-D8-HCd"/>
+                                        </connections>
+                                    </button>
+                                    <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Gu-LP-KB8">
+                                        <rect key="frame" x="65" y="0.0" width="320" height="172"/>
+                                        <subviews>
+                                            <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="14" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7UV-H6-LoG">
+                                                <rect key="frame" x="81" y="89" width="158" height="83"/>
+                                                <subviews>
+                                                    <colorWell id="yyY-cF-vZ0">
+                                                        <rect key="frame" x="20" y="31" width="54" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="colorSelect:" target="XfG-lQ-9wD" id="ywM-IO-fAI"/>
+                                                        </connections>
+                                                    </colorWell>
+                                                    <button verticalHuggingPriority="750" id="Zrp-jU-iZV">
+                                                        <rect key="frame" x="74" y="31" width="44" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSTouchBarTextLeftAlignTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dPl-O6-6v2">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="leftAlign:" target="XfG-lQ-9wD" id="euE-GQ-GfM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button verticalHuggingPriority="750" id="rUx-cK-x9t">
+                                                        <rect key="frame" x="74" y="31" width="44" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSTouchBarTextCenterAlignTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="X1Q-jd-vcF">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="centerAlign:" target="XfG-lQ-9wD" id="P1n-t2-IKH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button verticalHuggingPriority="750" id="x0r-Nx-Lag">
+                                                        <rect key="frame" x="74" y="31" width="44" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSTouchBarTextRightAlignTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="654-Vn-56x">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="rightAlign:" target="XfG-lQ-9wD" id="mnP-uG-Tbl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lol-V8-CoH">
+                                                        <rect key="frame" x="120" y="55" width="44" height="32"/>
+                                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSTouchBarShareTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5e2-P7-pzX">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="exportImage:" target="XfG-lQ-9wD" id="jVd-85-yrK"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5m-kN-4Bl">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="MSJ-Lt-21n">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="rD0-Tk-6hh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <size key="minSize" width="320" height="83"/>
+                                                            <size key="maxSize" width="380" height="10000000"/>
+                                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="8LO-fa-MDu"/>
+                                                            </connections>
+                                                        </textView>
+                                                    </subviews>
+                                                </clipView>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="loU-0a-eBR">
+                                                    <rect key="frame" x="-100" y="-100" width="225" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="IwZ-fX-yvG">
+                                                    <rect key="frame" x="-100" y="-100" width="15" height="83"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eOj-fl-oJ1">
+                                        <rect key="frame" x="409" y="69" width="47" height="32"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KIb-0F-9XP">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="zO:" target="XfG-lQ-9wD" id="MbF-Kp-UHb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="U9g-mu-ylI"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hWU-Do-wEF" secondAttribute="trailing" id="7G0-2d-LZ6"/>
+                            <constraint firstAttribute="bottom" secondItem="hWU-Do-wEF" secondAttribute="bottom" id="9OH-9W-yoM"/>
+                            <constraint firstItem="hWU-Do-wEF" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="DMG-lh-oF1"/>
+                            <constraint firstItem="5J7-z5-7lz" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="DZN-6g-nUY"/>
+                            <constraint firstItem="5J7-z5-7lz" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="F6m-0q-gay"/>
+                            <constraint firstItem="hWU-Do-wEF" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="gmm-6M-GUA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView2" destination="SiC-cb-5GA" id="qBl-Y7-sdi"/>
+                        <outlet property="myControls" destination="5J7-z5-7lz" id="L9M-sm-qYd"/>
+                        <outlet property="myText" destination="rD0-Tk-6hh" id="oez-l8-UeH"/>
+                        <outlet property="scrollView" destination="hWU-Do-wEF" id="eFa-2w-h9l"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-728" y="550"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+        <image name="NSTouchBarShareTemplate" width="15" height="30"/>
+        <image name="NSTouchBarTextCenterAlignTemplate" width="14" height="30"/>
+        <image name="NSTouchBarTextLeftAlignTemplate" width="14" height="30"/>
+        <image name="NSTouchBarTextRightAlignTemplate" width="14" height="30"/>
+    </resources>
 </document>
