@@ -80,8 +80,13 @@ class ViewController: NSViewController, NSTextViewDelegate {
         myControls.isHidden = true
         let rep = view.bitmapImageRepForCachingDisplay(in: view.bounds)!
         view.cacheDisplay(in: view.bounds, to: rep)
-        if let data = rep.representation(using: NSBitmapImageRep.FileType.png, properties: [:]) {
-            try! data.write(to: URL(fileURLWithPath: "/Users/koraybirand/Desktop/yt.png"))
+        
+        if let data = rep.representation(using: NSBitmapImageRep.FileType.jpeg, properties: [.compressionFactor:0.7]) {
+            rep.converting(to: NSColorSpace.sRGB, renderingIntent: NSColorRenderingIntent.perceptual)
+            
+            
+            
+            try! data.write(to: URL(fileURLWithPath: "/Users/koraybirand/Desktop/yt.jpg"))
         }
         myControls.isHidden = false
         
@@ -90,6 +95,18 @@ class ViewController: NSViewController, NSTextViewDelegate {
     @objc func loadImage() {
         
         imageView2.image = myNewImage
+        
+    }
+    
+    @IBAction func flipImage(_ sender: NSButton) {
+        imageView2.image = imageView2.image?.flipped(flipHorizontally: true, flipVertically: false)
+    }
+    
+    
+    func saveJpeg(image:NSImage) {
+        
+  
+        
         
     }
     
@@ -227,4 +244,23 @@ class ViewController: NSViewController, NSTextViewDelegate {
     
 }
 
+extension NSImage {
+    func flipped(flipHorizontally: Bool = false, flipVertically: Bool = false) -> NSImage {
+        let flippedImage = NSImage(size: size)
 
+        flippedImage.lockFocus()
+
+        NSGraphicsContext.current?.imageInterpolation = .high
+
+        let transform = NSAffineTransform()
+        transform.translateX(by: flipHorizontally ? size.width : 0, yBy: flipVertically ? size.height : 0)
+        transform.scaleX(by: flipHorizontally ? -1 : 1, yBy: flipVertically ? -1 : 1)
+        transform.concat()
+
+        draw(at: .zero, from: NSRect(origin: .zero, size: size), operation: .sourceOver, fraction: 1)
+
+        flippedImage.unlockFocus()
+
+        return flippedImage
+    }
+}

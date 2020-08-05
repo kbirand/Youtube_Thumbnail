@@ -157,6 +157,17 @@ extension NSImage {
         }
     }
     
+    func imagePNGRepresentation() -> NSData? {
+          if let imageTiffData = self.tiffRepresentation, let imageRep = NSBitmapImageRep(data: imageTiffData) {
+              // let imageProps = [NSImageCompressionFactor: 0.9] // Tiff/Jpeg
+              // let imageProps = [NSImageInterlaced: NSNumber(value: true)] // PNG
+            imageRep.converting(to: NSColorSpace.sRGB, renderingIntent: NSColorRenderingIntent.perceptual)
+            let imageData = imageRep.representation(using: NSBitmapImageRep.FileType.jpeg, properties: [.compressionFactor:0.7]) as NSData?
+              return imageData
+          }
+          return nil
+      }
+    
     enum NSImageExtensionError: Error {
         case unwrappingPNGRepresentationFailed
     }
